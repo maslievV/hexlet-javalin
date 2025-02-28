@@ -7,7 +7,10 @@ public class HelloWorld {
         var app = Javalin.create(config -> {
            config.bundledPlugins.enableDevLogging();
         });
-        app.get("/", ctx -> ctx.result("Hello, World"));
+        app.get("/hello", ctx -> {
+            var name = ctx.queryParam("name");
+            ctx.result("Hello, " + name);
+        });
         app.start(7070);
     }
 }
