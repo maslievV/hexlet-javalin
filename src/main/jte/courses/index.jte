@@ -10,7 +10,6 @@
     <body>
     @template.page(
         content = @`
-        <h1>${page.getHeader()}</h1>
         @if(page.getCourses().isEmpty())
             <p>There is no courses yet</p>
         @else
@@ -21,6 +20,10 @@
                 </div>
             @endfor
         @endif
+        <form action="/course" method="get">
+            <input type="search" required name="term" value="${page.getTerm()}">
+            <input type="submit" value="Search">
+        </form>
         `
     )
     </body>
