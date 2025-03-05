@@ -8,20 +8,20 @@
     <title>Hello Hexlet!</title>
     </head>
     <body>
-    <div>
-        <main>
+    @template.page(
+        content = @`
         <h1>${page.getHeader()}</h1>
-            @if(page.getCourses().isEmpty())
-                <p>There is no courses yet</p>
-            @else
-                @for(var course : page.getCourses())
-                    <div>
-                        <h2>${course.getName()}</h2>
-                        <p>${course.getDescription()}</p>
-                    </div>
-                @endfor
-            @endif
-        </main>
-    </div>
+        @if(page.getCourses().isEmpty())
+            <p>There is no courses yet</p>
+        @else
+            @for(var course : page.getCourses())
+                <div>
+                    <h2>${course.getName()}</h2>
+                    <p>${course.getDescription()}</p>
+                </div>
+            @endfor
+        @endif
+        `
+    )
     </body>
 </html>

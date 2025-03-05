@@ -11,7 +11,9 @@
     <title>Course</title>
 </head>
 <body>
-    <h2>${page.getCourse().getName()}</h2>
-    <p>${page.getCourse().getDescription()}</p>
+    @template.page(content = @`
+        <h2>${page.getCourse().getName()}</h2>
+        <p>${page.getCourse().getDescription()}</p>
+    `)
 </body>
 </html>

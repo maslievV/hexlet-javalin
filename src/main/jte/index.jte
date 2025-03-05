@@ -8,6 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div>Hello World!</div>
+    @template.page(
+        content = @`
+        <div>Hello World!</div>
+        `
+    )
 </body>
 </html>
