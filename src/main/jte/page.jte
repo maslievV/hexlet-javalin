@@ -15,6 +15,9 @@
         <ul>
             <li><a href="/">Main Page</a></li>
             <li><a href="/course">Courses</a></li>
+            <li><a href="/users">Users</a></li>
+            <li><a href="/users/build">Add user</a></li>
+            <li><a href="/course/build">Add course</a></li>
         </ul>
     </header>
     ${content}

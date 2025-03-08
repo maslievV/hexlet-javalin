@@ -15,9 +15,8 @@ public class Course {
     private String name;
     private String description;
 
-    public Course(String description, String name, Long id) {
-        this.description = description;
+    public Course(String name, String description) {
         this.name = name;
-        this.id = id;
+        this.description = description;
     }
 }
